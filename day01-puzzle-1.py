@@ -19,17 +19,6 @@ def create_delta(input):
 	}
 	
 	return delta
-	
-def update_state(old_state, delta):
-	new_state = {key: value for (key, value) in old_state.items()}
-	new
-	new_state = (old_state[heading] + delta[heading]) % 4
-	new_state['d']
-
-deltas = [
-	{'heading': direction_map[input[0]], 
-	 'displacement': int(input[1:])} 
-	 for input in puzzle_inputs]
 
 initial_state = {
 	'heading': 0,
@@ -40,26 +29,4 @@ initial_state = {
 }
 
 print(initial_state)
-
-
-def update_state(state, delta):
-	new_heading = (state['heading'] + delta['heading']) % 4
-	new_displacement = str(new_heading)
-	
-	state['heading'] = new_heading
-	state[new_displacement] = state[new_displacement] + delta['displacement']
-	
-	return state
-	
-current_state = initial_state
-for delta in deltas:
-	current_state = update_state(current_state, delta)
-	print(current_state)
-	
-def determine_final_position(state):
-	up = state['0'] - state['2']
-	over = state['1'] - state['3']
-	print((up, over))
-	
-determine_final_position(current_state)
 
