@@ -21,8 +21,6 @@ def create_delta(input):
 	return delta
 	
 def update_state(old_state, delta):
-	
-	
 	new_state = {key: value for (key, value) in old_state.items()}
 	new
 	new_state = (old_state[heading] + delta[heading]) % 4
@@ -64,3 +62,4 @@ def determine_final_position(state):
 	print((up, over))
 	
 determine_final_position(current_state)
+
